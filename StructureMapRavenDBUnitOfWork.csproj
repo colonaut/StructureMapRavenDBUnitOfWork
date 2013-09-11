@@ -7,8 +7,8 @@
     <ProjectGuid>{647331DC-6500-475C-A029-3A0BA42E8C49}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RavenDBUnitOfWork</RootNamespace>
-    <AssemblyName>StructureMapRavenDBUnitOfWork</AssemblyName>
+    <RootNamespace>MedienKultur.RavenDBUnitOfWork</RootNamespace>
+    <AssemblyName>MedienKultur.StructureMapRavenDBUnitOfWork</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -1,9 +1,10 @@
 ﻿using Raven.Client;
 using Raven.Client.Embedded;
 using StructureMap.Configuration.DSL;
+
 //using Raven.Client.Document;
 
-namespace RavenDBUnitOfWork.DependencyResolution
+namespace MedienKultur.RavenDBUnitOfWork.DependencyResolution
 {
     public sealed class StructureMapRavenDbRegistry : Registry
     {

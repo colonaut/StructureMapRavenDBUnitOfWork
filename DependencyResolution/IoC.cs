@@ -18,7 +18,7 @@
 
 using StructureMap;
 
-namespace RavenDBUnitOfWork.DependencyResolution {
+namespace MedienKultur.RavenDBUnitOfWork.DependencyResolution {
     public static class IoC {
         public static IContainer Initialize() {
             ObjectFactory.Initialize(x =>

@@ -18,7 +18,7 @@
 using System.Web.Http.Dependencies;
 using StructureMap;
 
-namespace RavenDBUnitOfWork.DependencyResolution
+namespace MedienKultur.RavenDBUnitOfWork.DependencyResolution
 {
     /// <summary>
     /// The structure map dependency resolver.

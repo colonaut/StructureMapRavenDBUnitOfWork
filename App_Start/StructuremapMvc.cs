@@ -17,13 +17,13 @@
 
 using System.Web.Http;
 using System.Web.Mvc;
-using RavenDBUnitOfWork.App_Start;
-using RavenDBUnitOfWork.DependencyResolution;
+using MedienKultur.RavenDBUnitOfWork.App_Start;
+using MedienKultur.RavenDBUnitOfWork.DependencyResolution;
 using StructureMap;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(StructuremapMvc), "Start")]
 
-namespace RavenDBUnitOfWork.App_Start {
+namespace MedienKultur.RavenDBUnitOfWork.App_Start {
     public static class StructuremapMvc {
         public static void Start() {
 			IContainer container = IoC.Initialize();

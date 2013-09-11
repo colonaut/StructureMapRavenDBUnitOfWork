@@ -4,7 +4,7 @@ using System.Web.Http.Filters;
 using Raven.Client;
 using StructureMap;
 
-namespace RavenDBUnitOfWork.Filters
+namespace MedienKultur.RavenDBUnitOfWork.Filters
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = true)]
     public class RavenDbDocumentSessionHttpAttribute : ActionFilterAttribute, IActionFilter

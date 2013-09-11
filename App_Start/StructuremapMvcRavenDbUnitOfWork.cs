@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Web.Http;
 using System.Web.Mvc;
+using MedienKultur.RavenDBUnitOfWork.App_Start;
+using MedienKultur.RavenDBUnitOfWork.DependencyResolution;
+using MedienKultur.RavenDBUnitOfWork.Filters;
 using Raven.Client;
-using RavenDBUnitOfWork.App_Start;
-using RavenDBUnitOfWork.DependencyResolution;
-using RavenDBUnitOfWork.Filters;
 using StructureMap;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(RavenDbUnitOfWorkFilterConfig), "Start")]
 [assembly: WebActivator.PostApplicationStartMethod(typeof(RavenDbUnitOfWorkStructureMapRegistry), "Start")]
 
-namespace RavenDBUnitOfWork.App_Start
+namespace MedienKultur.RavenDBUnitOfWork.App_Start
 {
 
     public static class RavenDbUnitOfWorkFilterConfig
@@ -41,7 +41,6 @@ namespace RavenDBUnitOfWork.App_Start
 
             using (var session = ObjectFactory.GetInstance<IDocumentSession>())
             {
-
                 session.Store(new StartUp());
                 session.SaveChanges();
             }
@@ -55,7 +54,6 @@ namespace RavenDBUnitOfWork.App_Start
                 TestResult = "If you can read this, everything's fine. You did it! Your RavenDB is up and running! Use your controllers implementing IDocumentSession and start convenient working with RavenDB!";
             }
 
-            public int Id { get; set; }
             public DateTime Created { get; set; }
             public string TestResult { get; set; }
 
