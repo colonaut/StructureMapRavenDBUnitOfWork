@@ -14,3 +14,5 @@ If you do not want to register the attribute for every controller, disable the g
 The nuspec defines RavenDB Embedded as requirement, so if you pack it and install you can play around with it. You can switch to Raven Server easily, the client is the same.
 
 This implementation is built on StructureMap.MVC4 (Web Advanced)
+
+It's strongly recommended to pack the nuspec file and add the package to your solution, rather than reference it, as the package will add the files to your solution, as you might want to edit them.
