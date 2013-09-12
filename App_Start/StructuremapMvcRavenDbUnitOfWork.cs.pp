@@ -4,7 +4,6 @@ using System.Web.Mvc;
 using $rootnamespace$.App_Start;
 using $rootnamespace$.DependencyResolution;
 using $rootnamespace$.Filters;
-using Raven.Client;
 using StructureMap;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(RavenDbUnitOfWorkFilterConfig), "Start")]
@@ -30,7 +29,17 @@ namespace $rootnamespace$.App_Start
         public static void Start()
         {
             //add additional StructureMapRavenDBRegistry to ObjectFactory's container _after_ (PostApplicationStart) the initialization is done (in StructuremapMvc).
-            ObjectFactory.Configure(r => r.AddRegistry<StructureMapRavenDbRegistry>());            
+            ObjectFactory.Configure(r => r.AddRegistry<StructureMapRavenDbRegistry>());
+			//place your initial raven objects here for creation on app start, if you want to
+            //using (var session = ObjectFactory.GetInstance<IDocumentSession>())
+            //{
+            //    session.Store(
+            //        new ExampleModel
+            //            {
+                                                              
+            //            });
+            //    session.SaveChanges();
+            //}       
         }
 
     }

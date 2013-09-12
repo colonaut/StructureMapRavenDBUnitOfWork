@@ -4,7 +4,6 @@ using System.Web.Mvc;
 using MedienKultur.RavenDBUnitOfWork.App_Start;
 using MedienKultur.RavenDBUnitOfWork.DependencyResolution;
 using MedienKultur.RavenDBUnitOfWork.Filters;
-using Raven.Client;
 using StructureMap;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(RavenDbUnitOfWorkFilterConfig), "Start")]
@@ -32,32 +31,29 @@ namespace MedienKultur.RavenDBUnitOfWork.App_Start
         {
             //add additional StructureMapRavenDBRegistry to ObjectFactory's container _after_ (PostApplicationStart) the initialization is done (in StructuremapMvc).
             ObjectFactory.Configure(r => r.AddRegistry<StructureMapRavenDbRegistry>());
-            InitRavenDbStartup();
+            //place your initial raven objects here for creation on app start, if you want to
+            //using (var session = ObjectFactory.GetInstance<IDocumentSession>())
+            //{
+            //    session.Store(
+            //        new ExampleModel
+            //            {
+                                                              
+            //            });
+            //    session.SaveChanges();
+            //}
         }
+    }
 
-        //tests only!
-        static void InitRavenDbStartup()
+    public class StartUp
+    {
+        public StartUp()
         {
-
-            using (var session = ObjectFactory.GetInstance<IDocumentSession>())
-            {
-                session.Store(new StartUp());
-                session.SaveChanges();
-            }
+            Created = DateTime.UtcNow;
+            TestResult = "If you can read this, everything's fine. You did it! Your RavenDB is up and running! Use your controllers implementing IDocumentSession and start convenient working with RavenDB!";
         }
 
-        public class StartUp
-        {
-            public StartUp()
-            {
-                Created = DateTime.UtcNow;
-                TestResult = "If you can read this, everything's fine. You did it! Your RavenDB is up and running! Use your controllers implementing IDocumentSession and start convenient working with RavenDB!";
-            }
-
-            public DateTime Created { get; set; }
-            public string TestResult { get; set; }
-
-        }
+        public DateTime Created { get; set; }
+        public string TestResult { get; set; }
 
     }
 
