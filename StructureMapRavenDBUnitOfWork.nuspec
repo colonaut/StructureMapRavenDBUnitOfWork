@@ -4,24 +4,24 @@
     <id>StructureMap.MVC4.RavenDB.Embedded.UnitOfWork</id>
     <version>1.0.0.0</version>
     <title>StructureMap.MVC4.RavenDB.Embedded.UnitOfWork</title>
-    <authors>@colonaut</authors>
-    <owners>@colonaut</owners>
+    <authors>colonaut</authors>
+    <owners>colonaut</owners>
     <!--licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl-->
-    <!--projectUrl>http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited</projectUrl-->
+    <projectUrl>https://github.com/colonaut/StructureMapRavenDBUnitOfWork</projectUrl>
     <!--iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      This adds [...] to the StructureMap.MVC4 DependencyResolution which lets you implement an instance of IDocumentSession envoked by structuremap in any controller.
+      Adds a unit of work for the RavenDB Client to the StructureMap.MVC4 DependencyResolution which lets you implement an instance of IDocumentSession envoked by structuremap in any controller.
     </description>
     <summary>
-      This adds [...] to the StructureMap.MVC4 DependencyResolution which lets you implement an instance of IDocumentSession envoked by structuremap in any controller.
+      This adds a unit of work for the RavenDB Client to the StructureMap.MVC4 DependencyResolution which lets you implement an instance of IDocumentSession envoked by structuremap in any controller.
       The approach of triggering a RavenDB UnitOfWork is an overworked implementation of approach of Arnold Zokas, which is designed for an Integration of RavenDB w/o having to derive the Mvc Controller.
       You can use it with or without the StructureMap.MVC4 Controllerfactory.
-      Foe your convenience, the filter which closes the RavenDB DocumentSession is registered global by default.
-      If you do not want to register the Atrribute for every controller, disable the global registration within StructuremapMvcRavenDbUnitOfWork.cs in App_Start and register the Attribute manually only for those
+      For your convenience, the filter which closes the RavenDB DocumentSession is registered global by default.
+      If you do not want to register the attribute for every controller, disable the global registration within StructuremapMvcRavenDbUnitOfWork.cs in App_Start and register the Attribute manually only for those
       controllers which get an IDocumentSession injected.
       For an explanation of his approach look into his blog: http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited
-      This implementation is built on StructureMap.MVC4
+      This implementation is built on StructureMap.MVC4 (Web Advanced)
     </summary>
     <releaseNotes>Initial release</releaseNotes>
     <copyright>Copyright 2013</copyright>

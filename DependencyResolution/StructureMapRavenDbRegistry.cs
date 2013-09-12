@@ -1,7 +1,6 @@
 ﻿using Raven.Client;
 using Raven.Client.Embedded;
 using StructureMap.Configuration.DSL;
-
 //using Raven.Client.Document;
 
 namespace MedienKultur.RavenDBUnitOfWork.DependencyResolution
