@@ -119,6 +119,7 @@
     <Compile Include="Filters\RavenDbDocumentSessionAttribute.cs" />
     <Compile Include="Filters\RavenDbDocumentSessionHttpAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="README" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

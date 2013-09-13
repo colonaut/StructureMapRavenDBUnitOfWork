@@ -4,7 +4,7 @@
 This adds a unit of work for the RavenDB Client to the StructureMap.MVC4 DependencyResolution which lets you implement an instance of IDocumentSession envoked by structuremap in any controller.
 
 The approach of triggering a RavenDB UnitOfWork is an overworked implementation of approach of Arnold Zokas, which is designed for an Integration of RavenDB w/o having to derive the Mvc Controller.
-For an explanation of his approach look into his blog: http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited      
+For an explanation of his approach look into his blog: http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited   , http://web.archive.org/web/20120410052106/http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited   
 
 You can use it with or without the StructureMap.MVC4 Controllerfactory.
 

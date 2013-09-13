@@ -20,7 +20,7 @@
       For your convenience, the filter which closes the RavenDB DocumentSession is registered global by default.
       If you do not want to register the attribute for every controller, disable the global registration within StructuremapMvcRavenDbUnitOfWork.cs in App_Start and register the Attribute manually only for those
       controllers which get an IDocumentSession injected.
-      For an explanation of his approach look into his blog: http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited
+      For an explanation of his approach look into his blog: http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited, http://web.archive.org/web/20120410052106/http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited
       This implementation is built on StructureMap.MVC4 (Web Advanced)
     </summary>
     <releaseNotes>Initial release</releaseNotes>
