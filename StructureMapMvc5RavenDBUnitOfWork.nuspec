@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>StructureMap.MVC5.RavenDB.Embedded.UnitOfWork</id>
+    <version>5.0.0.0</version>
+    <title>StructureMap.RavenDB.Embedded.UnitOfWork (MVC5)</title>
+    <authors>colonaut</authors>
+    <owners>colonaut</owners>
+    <!--licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl-->
+    <projectUrl>https://github.com/colonaut/StructureMapRavenDBUnitOfWork</projectUrl>
+    <!--iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Adds a unit of work for the RavenDB Client to the StructureMap.MVC5 DependencyResolution which lets you implement an instance of IDocumentSession envoked by structuremap in any controller.
+    </description>
+    <summary>
+      This adds a unit of work for the RavenDB Client to the StructureMap.MVC5 DependencyResolution which lets you implement an instance of IDocumentSession envoked by structuremap in any controller.
+      The approach of triggering a RavenDB UnitOfWork is an overworked implementation of approach of Arnold Zokas, which is designed for an Integration of RavenDB w/o having to derive the Mvc Controller.
+      You can use it with or without the StructureMap.MVC5 Controllerfactory.
+      For your convenience, the filter which closes the RavenDB DocumentSession is registered global by default.
+      If you do not want to register the attribute for every controller, disable the global registration within StructuremapMvcRavenDbUnitOfWork.cs in App_Start and register the Attribute manually only for those
+      controllers which get an IDocumentSession injected.
+      For an explanation of his approach look into his blog: http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited, http://web.archive.org/web/20120410052106/http://novuscraft.com/blog/ravendb-unitofwork-and-mvc-revisited
+      This implementation is built on StructureMap.MVC4 (Web Advanced)
+    </summary>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>StructureMap Mvc5 Mvc Controller RavenDB UnitOfWork</tags>
+    <dependencies>
+    	<dependency id="StructureMap.MVC5" version="5.0.0.0" />
+      <dependency id="RavenDB.Embedded" version="2.0.2360" />
+    </dependencies>
+  </metadata>
+  <files>
+  	<file src="App_Start\StructuremapMvcRavenDbUnitOfWork.cs.pp" target="content\App_Start" />
+    <file src="DependencyResolution\StructureMapRavenDbRegistry.cs.pp" target="content\DependencyResolution" />
+    <file src="Filters\RavenDbDocumentSessionAttribute.cs.pp" target="content\Filters" />
+    <file src="Filters\RavenDbDocumentSessionHttpAttribute.cs.pp" target="content\Filters" />
+  </files>
+</package>

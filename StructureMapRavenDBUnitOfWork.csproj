@@ -37,11 +37,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="App_Start\StructuremapMvcRavenDbUnitOfWork.cs.pp" />
+    <None Include="StructureMapMvc5RavenDBUnitOfWork.nuspec" />
     <None Include="DependencyResolution\StructureMapRavenDbRegistry.cs.pp" />
     <None Include="Filters\RavenDbDocumentSessionAttribute.cs.pp" />
     <None Include="Filters\RavenDbDocumentSessionHttpAttribute.cs.pp" />
     <None Include="packages.config" />
-    <None Include="StructureMapRavenDBUnitOfWork.nuspec" />
+    <None Include="StructureMapMvc4RavenDBUnitOfWork.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
