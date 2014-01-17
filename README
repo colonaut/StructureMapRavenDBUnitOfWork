@@ -1,5 +1,6 @@
-﻿StructureMap.MVC4.RavenDB.Embedded.UnitOfWork
----------------------------------------------
+﻿/**********************************************
+* StructureMap.MVC4.RavenDB.Embedded.UnitOfWork
+*******************************************MK*/
       
 This adds a unit of work for the RavenDB Client to the StructureMap.MVC4 DependencyResolution which lets you implement an instance of IDocumentSession envoked by structuremap in any controller.
 
