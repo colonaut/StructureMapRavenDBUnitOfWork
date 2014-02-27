@@ -36,8 +36,8 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Start\_ppMvc4\StructuremapMvcRavenDbUnitOfWork.cs.pp" />
-    <None Include="App_Start\_ppMvc5\StructuremapMvcRavenDbUnitOfWork.cs.pp" />
+    <None Include="App_Start\_ppMvc4\InitStructuremapMvcRavenDbUnitOfWork.cs.pp" />
+    <None Include="App_Start\_ppMvc5\InitStructureMapMvcRavenDbUnitOfWork.cs.pp" />
     <None Include="StructureMapMvc5RavenDBUnitOfWork.nuspec" />
     <None Include="DependencyResolution\StructureMapRavenDbRegistry.cs.pp" />
     <None Include="Filters\RavenDbDocumentSessionAttribute.cs.pp" />
@@ -149,7 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\StructuremapMvc.cs" />
-    <Compile Include="App_Start\StructuremapMvcRavenDbUnitOfWork.cs" />
+    <Compile Include="App_Start\InitStructureMapMvcRavenDbUnitOfWork.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />

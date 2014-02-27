@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using $rootnamespace$.App_Start;
-using $rootnamespace$.DependencyResolution;
-using $rootnamespace$.Filters;
+using MedienKultur.RavenDBUnitOfWork;
+using MedienKultur.RavenDBUnitOfWork.DependencyResolution;
+using MedienKultur.RavenDBUnitOfWork.Filters;
 using StructureMap;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(RavenDbUnitOfWorkFilterConfig), "Start")]
 [assembly: WebActivatorEx.PostApplicationStartMethod(typeof(RavenDbUnitOfWorkStructureMapRegistry), "Start")]
 
-namespace $rootnamespace$.App_Start
+namespace MedienKultur.RavenDBUnitOfWork
 {
-	public static class RavenDbUnitOfWorkFilterConfig
+
+    public static class RavenDbUnitOfWorkFilterConfig
     {
         public static void Start()
         {
@@ -30,7 +31,7 @@ namespace $rootnamespace$.App_Start
         {
             //add additional StructureMapRavenDBRegistry to ObjectFactory's container _after_ (PostApplicationStart) the initialization is done (in StructuremapMvc).
             ObjectFactory.Configure(r => r.AddRegistry<StructureMapRavenDbRegistry>());
-			//place your initial raven objects here for creation on app start, if you want to
+            //place your initial raven objects here for creation on app start, if you want to
             //using (var session = ObjectFactory.GetInstance<IDocumentSession>())
             //{
             //    session.Store(
@@ -39,8 +40,21 @@ namespace $rootnamespace$.App_Start
                                                               
             //            });
             //    session.SaveChanges();
-            //}       
+            //}
+        }
+    }
+
+    public class StartUp
+    {
+        public StartUp()
+        {
+            Created = DateTime.UtcNow;
+            TestResult = "If you can read this, everything's fine. You did it! Your RavenDB is up and running! Use your controllers implementing IDocumentSession and start convenient working with RavenDB!";
         }
 
+        public DateTime Created { get; set; }
+        public string TestResult { get; set; }
+
     }
+
 }

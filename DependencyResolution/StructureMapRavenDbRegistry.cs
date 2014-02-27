@@ -33,9 +33,8 @@ namespace MedienKultur.RavenDBUnitOfWork.DependencyResolution
                     //use if your wan to directly access your raven database
                     //DataDirectory =  @"~\App_Data\RavenDB" (requires embedded)                    
                 }.Initialize();
+                
                 return documentStore;
-
-
             });
 
             // register RavenDB document session

@@ -6,10 +6,10 @@ using $rootnamespace$.DependencyResolution;
 using $rootnamespace$.Filters;
 using StructureMap;
 
-[assembly: WebActivator.PreApplicationStartMethod(typeof(RavenDbUnitOfWorkFilterConfig), "Start")]
-[assembly: WebActivator.PostApplicationStartMethod(typeof(RavenDbUnitOfWorkStructureMapRegistry), "Start")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(RavenDbUnitOfWorkFilterConfig), "Start")]
+[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(RavenDbUnitOfWorkStructureMapRegistry), "Start")]
 
-namespace $rootnamespace$.App_Start
+namespace $rootnamespace$
 {
 	public static class RavenDbUnitOfWorkFilterConfig
     {

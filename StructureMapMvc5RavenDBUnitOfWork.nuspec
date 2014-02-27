@@ -32,7 +32,7 @@
     </dependencies>
   </metadata>
   <files>
-  	<file src="App_Start\_ppMvc5\StructuremapMvcRavenDbUnitOfWork.cs.pp" target="content\App_Start" />
+  	<file src="App_Start\_ppMvc5\InitStructureMapMvcRavenDbUnitOfWork.cs.pp" target="content\App_Start" />
     <file src="DependencyResolution\StructureMapRavenDbRegistry.cs.pp" target="content\DependencyResolution" />
     <file src="Filters\RavenDbDocumentSessionAttribute.cs.pp" target="content\Filters" />
     <file src="Filters\RavenDbDocumentSessionHttpAttribute.cs.pp" target="content\Filters" />
