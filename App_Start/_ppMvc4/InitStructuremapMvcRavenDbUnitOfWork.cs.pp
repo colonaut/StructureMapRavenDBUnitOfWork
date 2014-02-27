@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using $rootnamespace$.App_Start;
+using $rootnamespace$;
 using $rootnamespace$.DependencyResolution;
 using $rootnamespace$.Filters;
 using StructureMap;

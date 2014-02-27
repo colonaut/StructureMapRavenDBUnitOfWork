@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>StructureMap.MVC4.RavenDB.Embedded.UnitOfWork</id>
-    <version>4.0.0.0</version>
+    <version>4.0.1.0</version>
     <title>StructureMap.RavenDB.Embedded.UnitOfWork (MVC4)</title>
     <authors>colonaut</authors>
     <owners>colonaut</owners>

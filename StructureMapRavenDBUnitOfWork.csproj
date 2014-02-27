@@ -148,7 +148,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="App_Start\InitStructureMapMvc.cs" />
     <Compile Include="App_Start\InitStructureMapMvcRavenDbUnitOfWork.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
